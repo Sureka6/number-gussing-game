@@ -1,0 +1,39 @@
+import random
+
+def guess_number():
+    number = random.randint(1, 100)
+    attempts = 0
+    guess = None
+    
+    print("Welcome to the Number Guessing Game!")
+    
+    while guess != number:
+        guess = int(input("Guess the number between 1 and 100: "))
+        attempts += 1
+        if guess < number:
+            print("Too low! Try again.")
+        elif guess > number:
+            print("Too high! Try again.")
+        else:
+            print(f"Congratulations! You've guessed the number in {attempts} attempts.")
+            break
+
+guess_number()
+Sample Output:
+
+vbnet
+Copy code
+Welcome to the Number Guessing Game!
+Guess the number between 1 and 100: 50
+Too high! Try again.
+Guess the number between 1 and 100: 30
+Too low! Try again.
+Guess the number between 1 and 100: 40
+Too low! Try again.
+Guess the number between 1 and 100: 45
+Congratulations! You've guessed the number in 4 attempts.
+3. To-Do List Application (CLI)
+Objective: Build a command-line to-do list application where users can add, remove, and view tasks.
+
+python
+Copy code
